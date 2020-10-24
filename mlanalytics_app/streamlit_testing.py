@@ -1,4 +1,6 @@
-#from PIL import Image
+from PIL import Image
+import requests
+from io import BytesIO
 import pandas as pd
 import numpy as np
 import streamlit as st
@@ -17,12 +19,12 @@ def image_resize(image, bw):
 
     return image
 
-#logo_loc = 'C:/ML Analytics/00 - ML Stuff/98 - ML Analytics Branding/'   
+logo_url = 'https://i.imgur.com/xFa9NmS.png'   
+response = requests.get(logo_url)
+mlanalytics_logo = Image.open(BytesIO(response.content))
+mlanalytics_logo = image_resize( mlanalytics_logo, 500 )
 
-#mlanalytics_logo = Image.open(logo_loc + 'logo_transparent_background.png')
-#mlanalytics_logo = image_resize( mlanalytics_logo, 500 )
-
-#st.image(mlanalytics_logo )
+st.image(mlanalytics_logo )
 
 # Ainda não é possível alinhar objectos( imagens, gráficos, selectboxes )
 # à esquerda/direita/centro/etc.

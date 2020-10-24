@@ -1,4 +1,4 @@
-from PIL import Image
+#from PIL import Image
 import pandas as pd
 import numpy as np
 import streamlit as st
@@ -17,10 +17,10 @@ def image_resize(image, bw):
 
     return image
 
-logo_loc = 'C:/ML Analytics/00 - ML Stuff/98 - ML Analytics Branding/'   
+#logo_loc = 'C:/ML Analytics/00 - ML Stuff/98 - ML Analytics Branding/'   
 
-mlanalytics_logo = Image.open(logo_loc + 'logo_transparent_background.png')
-mlanalytics_logo = image_resize( mlanalytics_logo, 500 )
+#mlanalytics_logo = Image.open(logo_loc + 'logo_transparent_background.png')
+#mlanalytics_logo = image_resize( mlanalytics_logo, 500 )
 
 st.image(mlanalytics_logo )
 

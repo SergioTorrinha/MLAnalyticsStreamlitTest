@@ -22,7 +22,7 @@ def image_resize(image, bw):
 #mlanalytics_logo = Image.open(logo_loc + 'logo_transparent_background.png')
 #mlanalytics_logo = image_resize( mlanalytics_logo, 500 )
 
-st.image(mlanalytics_logo )
+#st.image(mlanalytics_logo )
 
 # Ainda não é possível alinhar objectos( imagens, gráficos, selectboxes )
 # à esquerda/direita/centro/etc.
